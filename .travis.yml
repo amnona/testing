@@ -37,7 +37,7 @@ before_script:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sh -e /etc/init.d/xvfb start; fi
 script:
   - python -c 'print("hello")'
-  - python -c 'print("import matplotlib.pyplot as plt")'
+  - python -c 'import matplotlib.pyplot as plt'
   - python -c 'print("done")'
   # - WITH_COVERAGE=TRUE make all
 notifications:
