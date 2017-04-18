@@ -37,7 +37,7 @@ before_script:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sh -e /etc/init.d/xvfb start; fi
 script:
   - python -c 'print("hello")'
-  - export MPLBACKEND="qt5agg"
+  - export MPLBACKEND="agg"
   - python -c 'import os;print(os.environ["MPLBACKEND"])'
   - python -c 'import matplotlib.pyplot as plt'
   - python -c 'print("done")'
